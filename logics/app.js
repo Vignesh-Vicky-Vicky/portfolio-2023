@@ -266,7 +266,7 @@ const navbarScrollBgTl = gsap.timeline({
 });
 
 navbarScrollBgTl.to(".navbar-container", {
-  background: "#1f1f1f",
+  // background: "#1f1f1f",
 });
 
 // Hamburger Menu
@@ -287,3 +287,478 @@ hamburgerMobileItems.forEach((item) => {
     hamburgerContainer.classList.remove("active");
   });
 });
+
+// Skills
+
+const skillsTitle = gsap.timeline({
+  defaults: {
+    duration: 0.75,
+    ease: "elastic.out(1,0.7)",
+  },
+  scrollTrigger: {
+    trigger: ".skills-container",
+    start: "top center",
+    end: "top 30%",
+  },
+});
+
+skillsTitle.fromTo(
+  ".skills-container .skills-title span",
+  {
+    y: 50,
+  },
+  {
+    y: 0,
+    opacity: 1,
+    stagger: 0.15,
+  }
+);
+
+const skilltl = gsap.timeline({
+  defaults: {
+    duration: 0.75,
+  },
+  scrollTrigger: {
+    trigger: ".skills-container",
+    start: "center center",
+    end: 8000,
+    pin: true,
+    scrub: true,
+  },
+});
+
+skilltl.to(".skills-container .progress-bar .bar", {
+  width: "10%",
+});
+skilltl.to(
+  ".skills-container .progress-bar .bar",
+  {
+    border: "2px solid",
+  },
+  "<"
+);
+skilltl.to(
+  ".skills-container .progress-bar .bar .bg",
+  {
+    width: "10%",
+  },
+  "<50%"
+);
+skilltl.to(
+  ".skills-container .skills-title span",
+  {
+    color: "#ffffff",
+    fontSize: 28,
+  },
+  "<"
+);
+
+// Html
+skilltl.to(
+  ".skills-container",
+  {
+    background: "#FF6D00",
+  },
+  "<"
+);
+skilltl.fromTo(
+  ".skills-container .html h3",
+  {
+    x: 50,
+  },
+  {
+    x: 0,
+    opacity: 1,
+  }
+);
+skilltl.fromTo(
+  ".skills-container .html img",
+  {
+    y: 50,
+  },
+  {
+    y: 0,
+    opacity: 1,
+  },
+  "<"
+);
+
+// css
+skilltl.to(".skills-container .skills-content", {
+  x: -window.innerWidth,
+  delay: 0.3,
+});
+skilltl.to(
+  ".skills-container .progress-bar .bar .bg",
+  {
+    width: "20%",
+    background: "#0B75BF",
+  },
+  "<"
+);
+skilltl.to(
+  ".skills-container",
+  {
+    background: "#0B75BF",
+  },
+  "<"
+);
+skilltl.fromTo(
+  ".skills-container .css h3",
+  {
+    x: 50,
+  },
+  {
+    x: 0,
+    opacity: 1,
+  }
+);
+skilltl.fromTo(
+  ".skills-container .css img",
+  {
+    y: 50,
+  },
+  {
+    y: 0,
+    opacity: 1,
+  },
+  "<"
+);
+
+// scss
+skilltl.to(".skills-container .skills-content", {
+  x: -window.innerWidth * 2,
+  delay: 0.3,
+});
+skilltl.to(
+  ".skills-container .progress-bar .bar .bg",
+  {
+    width: "30%",
+    background: "#D2699E",
+  },
+  "<"
+);
+skilltl.to(
+  ".skills-container",
+  {
+    background: "#D2699E",
+  },
+  "<"
+);
+skilltl.fromTo(
+  ".skills-container .scss h3",
+  {
+    x: 50,
+  },
+  {
+    x: 0,
+    opacity: 1,
+  }
+);
+skilltl.fromTo(
+  ".skills-container .scss img",
+  {
+    y: 50,
+  },
+  {
+    y: 0,
+    opacity: 1,
+  },
+  "<"
+);
+
+// bootstrap
+skilltl.to(".skills-container .skills-content", {
+  x: -window.innerWidth * 3,
+  delay: 0.3,
+});
+skilltl.to(
+  ".skills-container .progress-bar .bar .bg",
+  {
+    width: "40%",
+    background: "#7919F8",
+  },
+  "<"
+);
+skilltl.to(
+  ".skills-container",
+  {
+    background: "#7919F8",
+  },
+  "<"
+);
+skilltl.fromTo(
+  ".skills-container .bootstrap h3",
+  {
+    x: 50,
+  },
+  {
+    x: 0,
+    opacity: 1,
+  }
+);
+skilltl.fromTo(
+  ".skills-container .bootstrap img",
+  {
+    y: 50,
+  },
+  {
+    y: 0,
+    opacity: 1,
+  },
+  "<"
+);
+
+// js
+skilltl.to(".skills-container .skills-content", {
+  x: -window.innerWidth * 4,
+  delay: 0.3,
+});
+skilltl.to(
+  ".skills-container .progress-bar .bar .bg",
+  {
+    width: "50%",
+    background: "#E5A42C",
+  },
+  "<"
+);
+skilltl.to(
+  ".skills-container",
+  {
+    background: "#E5A42C",
+  },
+  "<"
+);
+skilltl.fromTo(
+  ".skills-container .javascript h3",
+  {
+    x: 50,
+  },
+  {
+    x: 0,
+    opacity: 1,
+  }
+);
+skilltl.fromTo(
+  ".skills-container .javascript img",
+  {
+    y: 50,
+  },
+  {
+    y: 0,
+    opacity: 1,
+  },
+  "<"
+);
+
+// jquery
+skilltl.to(".skills-container .skills-content", {
+  x: -window.innerWidth * 5,
+  delay: 0.3,
+});
+skilltl.to(
+  ".skills-container .progress-bar .bar .bg",
+  {
+    width: "60%",
+    background: "#106DAE",
+  },
+  "<"
+);
+skilltl.to(
+  ".skills-container",
+  {
+    background: "#106DAE",
+  },
+  "<"
+);
+skilltl.fromTo(
+  ".skills-container .jquery h3",
+  {
+    x: 50,
+  },
+  {
+    x: 0,
+    opacity: 1,
+  }
+);
+skilltl.fromTo(
+  ".skills-container .jquery img",
+  {
+    y: 50,
+  },
+  {
+    y: 0,
+    opacity: 1,
+  },
+  "<"
+);
+
+// angular
+skilltl.to(".skills-container .skills-content", {
+  x: -window.innerWidth * 6,
+  delay: 0.3,
+});
+skilltl.to(
+  ".skills-container .progress-bar .bar .bg",
+  {
+    width: "70%",
+    background: "#BB1D19",
+  },
+  "<"
+);
+skilltl.to(
+  ".skills-container",
+  {
+    background: "#BB1D19",
+  },
+  "<"
+);
+skilltl.fromTo(
+  ".skills-container .angular h3",
+  {
+    x: 50,
+  },
+  {
+    x: 0,
+    opacity: 1,
+  }
+);
+skilltl.fromTo(
+  ".skills-container .angular img",
+  {
+    y: 50,
+  },
+  {
+    y: 0,
+    opacity: 1,
+  },
+  "<"
+);
+
+// ts
+skilltl.to(".skills-container .skills-content", {
+  x: -window.innerWidth * 7,
+  delay: 0.3,
+});
+skilltl.to(
+  ".skills-container .progress-bar .bar .bg",
+  {
+    width: "80%",
+    background: "#377CC8",
+  },
+  "<"
+);
+skilltl.to(
+  ".skills-container",
+  {
+    background: "#377CC8",
+  },
+  "<"
+);
+skilltl.fromTo(
+  ".skills-container .typescript h3",
+  {
+    x: 50,
+  },
+  {
+    x: 0,
+    opacity: 1,
+  }
+);
+skilltl.fromTo(
+  ".skills-container .typescript img",
+  {
+    y: 50,
+  },
+  {
+    y: 0,
+    opacity: 1,
+  },
+  "<"
+);
+
+// material
+skilltl.to(".skills-container .skills-content", {
+  x: -window.innerWidth * 8,
+  delay: 0.3,
+});
+skilltl.to(
+  ".skills-container .progress-bar .bar .bg",
+  {
+    width: "90%",
+    background: "#FB9008",
+  },
+  "<"
+);
+skilltl.to(
+  ".skills-container",
+  {
+    background: "#FB9008",
+  },
+  "<"
+);
+skilltl.fromTo(
+  ".skills-container .material h3",
+  {
+    x: 50,
+  },
+  {
+    x: 0,
+    opacity: 1,
+  }
+);
+skilltl.fromTo(
+  ".skills-container .material img",
+  {
+    y: 50,
+  },
+  {
+    y: 0,
+    opacity: 1,
+  },
+  "<"
+);
+
+// jgsap
+skilltl.to(".skills-container .skills-content", {
+  x: -window.innerWidth * 9,
+  delay: 0.3,
+});
+skilltl.to(
+  ".skills-container .progress-bar .bar .bg",
+  {
+    width: "100%",
+    background: "#088409",
+  },
+  "<"
+);
+skilltl.to(
+  ".skills-container",
+  {
+    background: "#088409",
+  },
+  "<"
+);
+skilltl.fromTo(
+  ".skills-container .gsap h3",
+  {
+    x: 50,
+  },
+  {
+    x: 0,
+    opacity: 1,
+  }
+);
+skilltl.fromTo(
+  ".skills-container .gsap img",
+  {
+    y: 50,
+  },
+  {
+    y: 0,
+    opacity: 1,
+  },
+  "<"
+);
+
+skilltl.to(".skills-container .skills-content", {});
